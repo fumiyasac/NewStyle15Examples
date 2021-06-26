@@ -16,6 +16,8 @@
 		DEAE7EE32686A145009ACBD9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EE22686A145009ACBD9 /* UIViewControllerExtension.swift */; };
 		DEAE7EE72686A218009ACBD9 /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EE62686A218009ACBD9 /* GlobalTabBarController.swift */; };
 		DEAE7EEA2686A22D009ACBD9 /* GlobalTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAE7EE82686A22D009ACBD9 /* GlobalTabBarController.storyboard */; };
+		DEAE7EED268718F7009ACBD9 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAE7EEB268718F7009ACBD9 /* SettingViewController.storyboard */; };
+		DEAE7EEF26871917009ACBD9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EEE26871917009ACBD9 /* SettingViewController.swift */; };
 		DEB52A172684D160000C33A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A162684D160000C33A2 /* AppDelegate.swift */; };
 		DEB52A192684D160000C33A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A182684D160000C33A2 /* SceneDelegate.swift */; };
 		DEB52A1B2684D160000C33A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A1A2684D160000C33A2 /* MainViewController.swift */; };
@@ -51,6 +53,8 @@
 		DEAE7EE22686A145009ACBD9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DEAE7EE62686A218009ACBD9 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		DEAE7EE92686A22D009ACBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GlobalTabBarController.storyboard; sourceTree = "<group>"; };
+		DEAE7EEC268718F7009ACBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingViewController.storyboard; sourceTree = "<group>"; };
+		DEAE7EEE26871917009ACBD9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DEB52A132684D160000C33A2 /* NewStyle15UIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewStyle15UIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB52A162684D160000C33A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB52A182684D160000C33A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				DEAE7EE82686A22D009ACBD9 /* GlobalTabBarController.storyboard */,
 				DEB52A1C2684D160000C33A2 /* MainViewController.storyboard */,
+				DEAE7EEB268718F7009ACBD9 /* SettingViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			children = (
 				DEAE7EE62686A218009ACBD9 /* GlobalTabBarController.swift */,
 				DEB52A1A2684D160000C33A2 /* MainViewController.swift */,
+				DEAE7EEE26871917009ACBD9 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			files = (
 				DEB52A232684D162000C33A2 /* LaunchScreen.storyboard in Resources */,
 				DEB52A202684D162000C33A2 /* Assets.xcassets in Resources */,
+				DEAE7EED268718F7009ACBD9 /* SettingViewController.storyboard in Resources */,
 				DEB52A1E2684D160000C33A2 /* MainViewController.storyboard in Resources */,
 				DEAE7EEA2686A22D009ACBD9 /* GlobalTabBarController.storyboard in Resources */,
 			);
@@ -358,6 +365,7 @@
 				DEB52A1B2684D160000C33A2 /* MainViewController.swift in Sources */,
 				DEAE7EE12686A12F009ACBD9 /* UICollectionViewExtension.swift in Sources */,
 				DEB52A172684D160000C33A2 /* AppDelegate.swift in Sources */,
+				DEAE7EEF26871917009ACBD9 /* SettingViewController.swift in Sources */,
 				DEAE7EE32686A145009ACBD9 /* UIViewControllerExtension.swift in Sources */,
 				DEB52A192684D160000C33A2 /* SceneDelegate.swift in Sources */,
 				DEAE7EDD2686A0FF009ACBD9 /* NSObjectProtocolExtension.swift in Sources */,
@@ -403,6 +411,14 @@
 				DEAE7EE92686A22D009ACBD9 /* Base */,
 			);
 			name = GlobalTabBarController.storyboard;
+			sourceTree = "<group>";
+		};
+		DEAE7EEB268718F7009ACBD9 /* SettingViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEAE7EEC268718F7009ACBD9 /* Base */,
+			);
+			name = SettingViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		DEB52A1C2684D160000C33A2 /* MainViewController.storyboard */ = {
