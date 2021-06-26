@@ -1,13 +1,13 @@
 //
-//  GlobalTabBarController.swift
+//  MainViewController.swift
 //  NewStyle15UIKitExample
 //
-//  Created by 酒井文也 on 2021/06/26.
+//  Created by 酒井文也 on 2021/06/24.
 //
 
 import UIKit
 
-final class GlobalTabBarController: UITabBarController {
+final class MainViewController: UIViewController {
 
     // MARK: - Override
 
