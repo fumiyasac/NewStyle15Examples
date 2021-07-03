@@ -20,6 +20,7 @@
 		DEAE7EEF26871917009ACBD9 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EEE26871917009ACBD9 /* QuestionViewController.swift */; };
 		DEAE7EF1268719EA009ACBD9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF0268719EA009ACBD9 /* FeaturedViewController.swift */; };
 		DEAE7EF4268719FB009ACBD9 /* FeaturedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAE7EF2268719FB009ACBD9 /* FeaturedViewController.storyboard */; };
+		DEAE7EF82688B1F1009ACBD9 /* SampleApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF72688B1F1009ACBD9 /* SampleApiClient.swift */; };
 		DEB52A172684D160000C33A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A162684D160000C33A2 /* AppDelegate.swift */; };
 		DEB52A192684D160000C33A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A182684D160000C33A2 /* SceneDelegate.swift */; };
 		DEB52A1B2684D160000C33A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A1A2684D160000C33A2 /* MainViewController.swift */; };
@@ -59,6 +60,7 @@
 		DEAE7EEE26871917009ACBD9 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		DEAE7EF0268719EA009ACBD9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		DEAE7EF3268719FB009ACBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FeaturedViewController.storyboard; sourceTree = "<group>"; };
+		DEAE7EF72688B1F1009ACBD9 /* SampleApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleApiClient.swift; sourceTree = "<group>"; };
 		DEB52A132684D160000C33A2 /* NewStyle15UIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewStyle15UIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB52A162684D160000C33A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB52A182684D160000C33A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		DEAE7ED72686A060009ACBD9 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE7EF72688B1F1009ACBD9 /* SampleApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				DEAE7EE72686A218009ACBD9 /* GlobalTabBarController.swift in Sources */,
 				DEAE7EDA2686A0BE009ACBD9 /* CustomViewBase.swift in Sources */,
 				DEB52A1B2684D160000C33A2 /* MainViewController.swift in Sources */,
+				DEAE7EF82688B1F1009ACBD9 /* SampleApiClient.swift in Sources */,
 				DEAE7EE12686A12F009ACBD9 /* UICollectionViewExtension.swift in Sources */,
 				DEAE7EF1268719EA009ACBD9 /* FeaturedViewController.swift in Sources */,
 				DEB52A172684D160000C33A2 /* AppDelegate.swift in Sources */,
