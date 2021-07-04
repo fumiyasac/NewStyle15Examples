@@ -1,0 +1,17 @@
+{
+  "name": "new_style_15_examples",
+  "version": "1.0.0",
+  "description": "mock server of sample app NewStyle15Examples (UIKit & SwiftUI).",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": ">=4.17.21"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fumiyasac",
+  "license": "ISC"
+}
