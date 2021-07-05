@@ -15,5 +15,11 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBarTitle("Main")
+
+        // 
+        async {
+            let samples = try? await ApiClientManager.shared.getSamples()
+            print(samples)
+        }
     }
 }

@@ -6,15 +6,16 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 
 // Database構築用のJSONファイル
-// const router = jsonServer.router('datasources/db.json');
+const router = jsonServer.router('datasource/db.json');
 
 // 各種設定用
 const middlewares = jsonServer.defaults();
-// const rewrite_rules = jsonServer.rewriter({
-// });
+const rewrite_rules = jsonServer.rewriter({
+    "/api/mock/v1/summer_pieces/samples" : "/get_samples",
+});
 
 // リクエストのルールを設定する
-// server.use(rewrite_rules);
+server.use(rewrite_rules);
 
 // ミドルウェアを設定する (※コンソール出力するロガーやキャッシュの設定等)
 server.use(middlewares);
@@ -27,9 +28,9 @@ server.use(function (req, res, next) {
 });
 
 // ルーティングを設定する
-// server.use(router);
+server.use(router);
 
 // サーバをポート3000で起動する
 server.listen(3000, () => {
-    console.log('Chapter01 Mock Server is running...');
+    console.log('NewStyle15 API Mock Server is running...');
 });
