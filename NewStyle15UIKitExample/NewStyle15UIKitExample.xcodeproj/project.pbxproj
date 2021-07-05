@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE99DE8F269352A900E36D1C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DE99DE8E269352A900E36D1C /* KeychainAccess */; };
 		DEAE7ED02685FDAA009ACBD9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */; };
 		DEAE7ED326860391009ACBD9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ED226860391009ACBD9 /* SQLite */; };
 		DEAE7EDA2686A0BE009ACBD9 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7ED92686A0BE009ACBD9 /* CustomViewBase.swift */; };
@@ -82,6 +83,7 @@
 			files = (
 				DEAE7ED326860391009ACBD9 /* SQLite in Frameworks */,
 				DEAE7ED02685FDAA009ACBD9 /* SDWebImage in Frameworks */,
+				DE99DE8F269352A900E36D1C /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +241,7 @@
 			packageProductDependencies = (
 				DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */,
 				DEAE7ED226860391009ACBD9 /* SQLite */,
+				DE99DE8E269352A900E36D1C /* KeychainAccess */,
 			);
 			productName = NewStyle15UIKitExample;
 			productReference = DEB52A132684D160000C33A2 /* NewStyle15UIKitExample.app */;
@@ -315,6 +318,7 @@
 			packageReferences = (
 				DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				DEAE7ED126860391009ACBD9 /* XCRemoteSwiftPackageReference "SQLite" */,
+				DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = DEB52A142684D160000C33A2 /* Products */;
 			projectDirPath = "";
@@ -768,6 +772,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
@@ -787,6 +799,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE99DE8E269352A900E36D1C /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
