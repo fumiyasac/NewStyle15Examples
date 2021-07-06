@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 // MEMO: APIリクエストに関するEnum定義
 enum HTTPMethod {
@@ -15,7 +16,7 @@ enum HTTPMethod {
 
 // MEMO: APIエラーメッセージに関するEnum定義
 enum APIError: Error {
-    case error(String)
+    case error(message: String)
 }
 
 // MEMO: APIリクエストの状態に関するEnum定義
@@ -29,41 +30,44 @@ enum APIRequestState {
 // MARK: - Protocol
 
 protocol ApiClientManagerProtocol {
-    func getSamples() async throws -> [Sample]
+//    func getSamples() async throws -> [Sample]
 }
 
-struct Sample: Hashable, Decodable {
-
-    let id: Int
-
-    // MARK: - Enum
-
-    private enum Keys: String, CodingKey {
-        case id
-    }
-
-    // MARK: - Initializer
-
-    init(from decoder: Decoder) throws {
-
-        // JSONの配列内の要素を取得する
-        let container = try decoder.container(keyedBy: Keys.self)
-
-        // JSONの配列内の要素にある値をDecodeして初期化する
-        self.id = try container.decode(Int.self, forKey: .id)
-    }
-
-    // MARK: - Hashable
-
-    // MEMO: Hashableプロトコルに適合させるための処理
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
-    static func == (lhs: Sample, rhs: Sample) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
+//struct Sample: Hashable, Decodable {
+//
+//    let id: Int
+//    let name: String
+//
+//    // MARK: - Enum
+//
+//    private enum Keys: String, CodingKey {
+//        case id
+//        case name
+//    }
+//
+//    // MARK: - Initializer
+//
+//    init(from decoder: Decoder) throws {
+//
+//        // JSONの配列内の要素を取得する
+//        let container = try decoder.container(keyedBy: Keys.self)
+//
+//        // JSONの配列内の要素にある値をDecodeして初期化する
+//        self.id = try container.decode(Int.self, forKey: .id)
+//        self.name = try container.decode(String.self, forKey: .name)
+//    }
+//
+//    // MARK: - Hashable
+//
+//    // MEMO: Hashableプロトコルに適合させるための処理
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(id)
+//    }
+//
+//    static func == (lhs: Sample, rhs: Sample) -> Bool {
+//        return lhs.id == rhs.id && lhs.name == rhs.name
+//    }
+//}
 
 final class ApiClientManager {
 
@@ -95,6 +99,7 @@ final class ApiClientManager {
 
     func executeAPIRequest<T: Decodable>(endpointUrl: String, withParameters: [String : Any] = [:], httpMethod: HTTPMethod = .GET, responseFormat: T.Type) async throws -> T {
 
+        // MEMO: API通信用のリクエスト作成する（※現状はGET/POSTのみの機構を準備）
         var urlRequest: URLRequest
         switch httpMethod {
         case .GET:
@@ -102,27 +107,66 @@ final class ApiClientManager {
         case .POST:
             urlRequest = makePostRequest(endpointUrl, withParameters: withParameters)
         }
-
-        // MEMO: API Mock Serverへのリクエスト処理を実行する
-        do {
-            let (data, response) = try await URLSession.shared.data(for: urlRequest)
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                throw APIError.error("Invalid status code.")
-            }
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            return try decoder.decode(T.self, from: data)
-        } catch {
-            throw APIError.error("Invalid data response.")
-        }
+        return try await handleAPIRequest(responseType: T.self, urlRequest: urlRequest)
     }
 
     // MARK: - Private Function
 
-    // API Mock ServerへのGETリクエストを作成する
+    private func handleAPIRequest<T: Decodable>(responseType: T.Type, urlRequest: URLRequest) async throws -> T {
+
+        // Step1: API Mock Serverへのリクエストを実行する
+        let (data, response) = try await executeUrlSession(urlRequest: urlRequest)
+        // Step2: 受け取ったResponseを元にハンドリングする
+        let _ = try handleErrorByStatusCode(response: response)
+        // Step3: JSONをEntityへMappingする
+        return try decodeDataToJson(data: data)
+    }
+
+    // URLSessionを利用してAPIリクエスト処理を実行する
+    // MEMO: URLSession.shared.data(for: urlRequest)はiOS15から利用可能なメソッドである点に注意
+    private func executeUrlSession(urlRequest: URLRequest) async throws -> (Data, URLResponse) {
+        do {
+            return try await URLSession.shared.data(for: urlRequest)
+        } catch {
+            throw APIError.error(message: "No network connection.")
+        }
+    }
+
+    // レスポンスで受け取ったStatusCodeを元にエラーか否かをハンドリングする
+    private func handleErrorByStatusCode(response: URLResponse) throws {
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw APIError.error(message: "No http response.")
+        }
+        switch httpResponse.statusCode {
+        case 200...399:
+            break
+        case 400:
+            throw APIError.error(message: "Bad Request.")
+        case 401:
+            throw APIError.error(message: "Unauthorized.")
+        case 403:
+            throw APIError.error(message: "Forbidden.")
+        case 404:
+            throw APIError.error(message: "Not Found.")
+        default:
+            throw APIError.error(message: "Unknown.")
+        }
+    }
+
+    // レスポンスで受け取ったData(JSON)をDecodeしてEntityに変換する
+    private func decodeDataToJson<T: Decodable>(data: Data) throws -> T {
+        do {
+            let hashableObjects = JSONDecoder()
+            hashableObjects.keyDecodingStrategy = .convertFromSnakeCase
+            return try hashableObjects.decode(T.self, from: data)
+        } catch {
+            throw APIError.error(message: "Failed decode data.")
+        }
+    }
+
+    // GETリクエストを作成する
     private func makeGetRequest(_ urlString: String) -> URLRequest {
 
-        // MEMO: URLリクエストの作成
         guard let url = URL(string: urlString) else {
             fatalError("Invalid URL strings.")
         }
@@ -136,10 +180,9 @@ final class ApiClientManager {
         return urlRequest
     }
 
-    // API Mock ServerへのPOSTリクエストを作成する
+    // POSTリクエストを作成する
     private func makePostRequest(_ urlString: String, withParameters: [String : Any] = [:]) -> URLRequest {
 
-        // MEMO: URLリクエストの作成
         guard let url = URL(string: urlString) else {
             fatalError("Invalid URL strings.")
         }
@@ -164,8 +207,8 @@ final class ApiClientManager {
 
 // MARK: - ApiClientManagerProtocol
 
-extension ApiClientManager: ApiClientManagerProtocol {
-    func getSamples() async throws -> [Sample] {
-        return try await executeAPIRequest(endpointUrl: EndPoint.samples.getBaseUrl(), responseFormat: [Sample].self)
-    }
-}
+//extension ApiClientManager: ApiClientManagerProtocol {
+//    func getSamples() async throws -> [Sample] {
+//        return try await executeAPIRequest(endpointUrl: EndPoint.samples.getBaseUrl(), httpMethod: HTTPMethod.GET, responseFormat: [Sample].self)
+//    }
+//}

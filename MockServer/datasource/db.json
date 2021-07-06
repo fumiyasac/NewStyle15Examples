@@ -1,3 +1,9 @@
 {
-    "get_samples": []
+    "get_samples": [
+        {
+            "id" : 1,
+            "aaa" : "aaaaa",
+            "category" : "test"
+        }
+    ]
 }

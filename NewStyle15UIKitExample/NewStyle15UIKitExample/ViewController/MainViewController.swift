@@ -16,10 +16,13 @@ final class MainViewController: UIViewController {
 
         setupNavigationBarTitle("Main")
 
-        // 
-        async {
-            let samples = try? await ApiClientManager.shared.getSamples()
-            print(samples)
-        }
+//        async {
+//            do {
+//                let samples = try await ApiClientManager.shared.getSamples()
+//                print(samples)
+//            } catch APIError.error(let message) {
+//                print(message)
+//            }
+//        }
     }
 }
