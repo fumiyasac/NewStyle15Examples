@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		DE99DE8F269352A900E36D1C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DE99DE8E269352A900E36D1C /* KeychainAccess */; };
 		DE99DE9426935A6C00E36D1C /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9326935A6C00E36D1C /* KeychainManager.swift */; };
+		DE99DE9A2694ACB100E36D1C /* ResponseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE992694ACB100E36D1C /* ResponseDateFormatter.swift */; };
+		DE99DE9C2694ACF800E36D1C /* MainBannerContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9B2694ACF800E36D1C /* MainBannerContents.swift */; };
+		DE99DE9E2694AD5400E36D1C /* MainBannerAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9D2694AD5400E36D1C /* MainBannerAPIResponse.swift */; };
+		DE99DEA02695402800E36D1C /* FeaturedContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9F2695402800E36D1C /* FeaturedContents.swift */; };
 		DEAE7ED02685FDAA009ACBD9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */; };
 		DEAE7ED326860391009ACBD9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ED226860391009ACBD9 /* SQLite */; };
 		DEAE7EDA2686A0BE009ACBD9 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7ED92686A0BE009ACBD9 /* CustomViewBase.swift */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		DE99DE9326935A6C00E36D1C /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		DE99DE992694ACB100E36D1C /* ResponseDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDateFormatter.swift; sourceTree = "<group>"; };
+		DE99DE9B2694ACF800E36D1C /* MainBannerContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerContents.swift; sourceTree = "<group>"; };
+		DE99DE9D2694AD5400E36D1C /* MainBannerAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerAPIResponse.swift; sourceTree = "<group>"; };
+		DE99DE9F2695402800E36D1C /* FeaturedContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedContents.swift; sourceTree = "<group>"; };
 		DEAE7ED92686A0BE009ACBD9 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DEAE7EDC2686A0FF009ACBD9 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DEAE7EDE2686A114009ACBD9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -129,6 +137,31 @@
 				DE99DE90269352E300E36D1C /* SQLiteManager */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		DE99DE952694ABAA00E36D1C /* ResponseDataTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				DE99DE9D2694AD5400E36D1C /* MainBannerAPIResponse.swift */,
+			);
+			path = ResponseDataTransfer;
+			sourceTree = "<group>";
+		};
+		DE99DE962694ABE500E36D1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE99DE9B2694ACF800E36D1C /* MainBannerContents.swift */,
+				DE99DE9F2695402800E36D1C /* FeaturedContents.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE99DE982694AC9400E36D1C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DE99DE992694ACB100E36D1C /* ResponseDateFormatter.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		DEAE7ED4268603A0009ACBD9 /* ViewModel */ = {
@@ -224,6 +257,9 @@
 				DEB52A212684D162000C33A2 /* LaunchScreen.storyboard */,
 				DEAE7ED82686A06C009ACBD9 /* Extension */,
 				DE99DE922693533100E36D1C /* Infrastructure */,
+				DE99DE962694ABE500E36D1C /* Model */,
+				DE99DE982694AC9400E36D1C /* Modules */,
+				DE99DE952694ABAA00E36D1C /* ResponseDataTransfer */,
 				DEAE7ED5268603D8009ACBD9 /* Storyboard */,
 				DEAE7ED6268603E4009ACBD9 /* View */,
 				DEAE7EDB2686A0E3009ACBD9 /* ViewController */,
@@ -398,10 +434,14 @@
 				DEAE7EDA2686A0BE009ACBD9 /* CustomViewBase.swift in Sources */,
 				DEB52A1B2684D160000C33A2 /* MainViewController.swift in Sources */,
 				DEAE7EF82688B1F1009ACBD9 /* ApiClientManager.swift in Sources */,
+				DE99DE9C2694ACF800E36D1C /* MainBannerContents.swift in Sources */,
 				DEAE7EE12686A12F009ACBD9 /* UICollectionViewExtension.swift in Sources */,
 				DEAE7EF1268719EA009ACBD9 /* FeaturedViewController.swift in Sources */,
+				DE99DE9A2694ACB100E36D1C /* ResponseDateFormatter.swift in Sources */,
 				DEB52A172684D160000C33A2 /* AppDelegate.swift in Sources */,
+				DE99DE9E2694AD5400E36D1C /* MainBannerAPIResponse.swift in Sources */,
 				DEAE7EEF26871917009ACBD9 /* QuestionViewController.swift in Sources */,
+				DE99DEA02695402800E36D1C /* FeaturedContents.swift in Sources */,
 				DEAE7EE32686A145009ACBD9 /* UIViewControllerExtension.swift in Sources */,
 				DEB52A192684D160000C33A2 /* SceneDelegate.swift in Sources */,
 				DEAE7EDD2686A0FF009ACBD9 /* NSObjectProtocolExtension.swift in Sources */,
