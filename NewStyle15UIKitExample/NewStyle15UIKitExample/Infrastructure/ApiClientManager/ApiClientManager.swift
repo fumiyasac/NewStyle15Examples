@@ -71,6 +71,12 @@ protocol ApiClientManagerProtocol {
 
 final class ApiClientManager {
 
+    // MARK: - Singleton Instance
+
+    static let shared = ApiClientManager()
+
+    private init() {}
+
     // MARK: - Enum
 
     private enum EndPoint: String {
@@ -81,12 +87,6 @@ final class ApiClientManager {
             return [host, version, path, self.rawValue].joined(separator: "/")
         }
     }
-    
-    // MARK: - Singleton Instance
-
-    static let shared = ApiClientManager()
-
-    private init() {}
 
     // MARK: - Properties
 
