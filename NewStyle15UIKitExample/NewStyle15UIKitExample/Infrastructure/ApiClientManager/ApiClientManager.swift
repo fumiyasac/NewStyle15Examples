@@ -28,7 +28,12 @@ enum APIRequestState {
 
 // MARK: - Protocol
 
-protocol ApiClientManagerProtocol {}
+protocol ApiClientManagerProtocol {
+    func getMainBanner() async throws -> [MainBanner]
+    func getMainNews() async throws -> [MainNews]
+    func getMainPhoto(page: Int) async throws -> [MainPhotoAPIResponse]
+    func getFeaturedContents() async throws -> [FeaturedContents]
+}
 
 final class ApiClientManager {
 
@@ -41,8 +46,10 @@ final class ApiClientManager {
     // MARK: - Enum
 
     private enum EndPoint: String {
-        // TODO: 新規に作成するAPIエンドポイントに差し替える
-        case samples = "samples"
+        case mainBanners = "main_banners"
+        case mainNews = "main_news"
+        case mainPhotos = "main_photos"
+        case featuredContents = "featured_contents"
 
         func getBaseUrl() -> String {
             return [host, version, path, self.rawValue].joined(separator: "/")
@@ -117,9 +124,7 @@ final class ApiClientManager {
     // レスポンスで受け取ったData(JSON)をDecodeしてEntityに変換する
     private func decodeDataToJson<T: Decodable>(data: Data) throws -> T {
         do {
-            let hashableObjects = JSONDecoder()
-            hashableObjects.keyDecodingStrategy = .convertFromSnakeCase
-            return try hashableObjects.decode(T.self, from: data)
+            return try JSONDecoder().decode(T.self, from: data)
         } catch {
             throw APIError.error(message: "Failed decode data.")
         }
@@ -168,4 +173,22 @@ final class ApiClientManager {
 
 // MARK: - ApiClientManagerProtocol
 
-extension ApiClientManager: ApiClientManagerProtocol {}
+extension ApiClientManager: ApiClientManagerProtocol {
+
+    func getMainBanner() async throws -> [MainBanner] {
+        return try await executeAPIRequest(endpointUrl: EndPoint.mainBanners.getBaseUrl(), httpMethod: HTTPMethod.GET, responseFormat: [MainBanner].self)
+    }
+
+    func getMainNews() async throws -> [MainNews] {
+        return try await executeAPIRequest(endpointUrl: EndPoint.mainNews.getBaseUrl(), httpMethod: HTTPMethod.GET, responseFormat: [MainNews].self)
+    }
+
+    func getMainPhoto(page: Int = 1) async throws -> [MainPhotoAPIResponse] {
+        let endpointUrl = EndPoint.mainPhotos.getBaseUrl() + "?page=" + String(page)
+        return try await executeAPIRequest(endpointUrl: endpointUrl, httpMethod: HTTPMethod.GET, responseFormat: [MainPhotoAPIResponse].self)
+    }
+
+    func getFeaturedContents() async throws -> [FeaturedContents] {
+        return try await executeAPIRequest(endpointUrl: EndPoint.featuredContents.getBaseUrl(), httpMethod: HTTPMethod.GET, responseFormat: [FeaturedContents].self)
+    }
+}

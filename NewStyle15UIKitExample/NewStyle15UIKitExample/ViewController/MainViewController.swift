@@ -16,13 +16,24 @@ final class MainViewController: UIViewController {
 
         setupNavigationBarTitle("Main")
 
-//        async {
-//            do {
-//                let samples = try await ApiClientManager.shared.getSamples()
-//                print(samples)
-//            } catch APIError.error(let message) {
-//                print(message)
-//            }
-//        }
+        // MEMO: API疎通処理のテスト用に利用する処理
+        async {
+            do {
+//                let mainPhoto = try await ApiClientManager.shared.getMainPhoto(page: 1)
+//                print(mainPhoto)
+
+//                let mainBanner = try await ApiClientManager.shared.getMainBanner()
+//                print(mainBanner)
+
+//                let mainNews = try await ApiClientManager.shared.getMainNews()
+//                print(mainNews)
+
+//                let featuredContents = try await ApiClientManager.shared.getFeaturedContents()
+//                print(featuredContents)
+
+            } catch APIError.error(let message) {
+                print(message)
+            }
+        }
     }
 }
