@@ -1,9 +1,453 @@
 {
-    "get_samples": [
+    "get_main_banners": [
         {
             "id" : 1,
-            "aaa" : "aaaaa",
-            "category" : "test"
+            "title" : "TOP表示バナーサンプルVol.1",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.1の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner1.jpg"
+        },
+        {
+            "id" : 2,
+            "title" : "TOP表示バナーサンプルVol.2",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.2の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner2.jpg"
+        },
+        {
+            "id" : 3,
+            "title" : "TOP表示バナーサンプルVol.3",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.3の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner3.jpg"
+        },
+        {
+            "id" : 4,
+            "title" : "TOP表示バナーサンプルVol.4",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.4の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner4.jpg"
+        },
+        {
+            "id" : 5,
+            "title" : "TOP表示バナーサンプルVol.5",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.5の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner5.jpg"
+        },
+        {
+            "id" : 6,
+            "title" : "TOP表示バナーサンプルVol.6",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.6の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner6.jpg"
+        },
+        {
+            "id" : 7,
+            "title" : "TOP表示バナーサンプルVol.7",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.7の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner7.jpg"
+        },
+        {
+            "id" : 8,
+            "title" : "TOP表示バナーサンプルVol.8",
+            "category" : "夏の風景/思い出",
+            "summary" : "TOP表示バナーサンプルVol.8の概要または説明文がここに入ります。キャンペーン内容やイベントキャッチコピーを入稿して頂くとこちらに表示される仕様です。（※サムネイル画像サイズは1200×628でお願いします。）",
+            "image_url" : "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_banner8.jpg"
+        }
+    ],
+    "get_main_news": [
+        {
+            "id": 1,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news1.jpg",
+            "title": "News表示サンプルVol.1",
+            "description": "こちらはNews表示サンプルVol.1に関する概要記載テキストになります。"
+        },
+        {
+            "id": 2,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news2.jpg",
+            "title": "News表示サンプルVol.2",
+            "description": "こちらはNews表示サンプルVol.2に関する概要記載テキストになります。"
+        },
+        {
+            "id": 3,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news3.jpg",
+            "title": "News表示サンプルVol.3",
+            "description": "こちらはNews表示サンプルVol.3に関する概要記載テキストになります。"
+        },
+        {
+            "id": 4,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news4.jpg",
+            "title": "News表示サンプルVol.4",
+            "description": "こちらはNews表示サンプルVol.4に関する概要記載テキストになります。"
+        },
+        {
+            "id": 5,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news5.jpg",
+            "title": "News表示サンプルVol.5",
+            "description": "こちらはNews表示サンプルVol.5に関する概要記載テキストになります。"
+        },
+        {
+            "id": 6,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news6.jpg",
+            "title": "News表示サンプルVol.6",
+            "description": "こちらはNews表示サンプルVol.6に関する概要記載テキストになります。"
+        },
+        {
+            "id": 7,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news7.jpg",
+            "title": "News表示サンプルVol.7",
+            "description": "こちらはNews表示サンプルVol.7に関する概要記載テキストになります。"
+        },
+        {
+            "id": 8,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news8.jpg",
+            "title": "News表示サンプルVol.8",
+            "description": "こちらはNews表示サンプルVol.8に関する概要記載テキストになります。"
+        },
+        {
+            "id": 9,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news9.jpg",
+            "title": "News表示サンプルVol.9",
+            "description": "こちらはNews表示サンプルVol.9に関する概要記載テキストになります。"
+        },
+        {
+            "id": 10,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news10.jpg",
+            "title": "News表示サンプルVol.10",
+            "description": "こちらはNews表示サンプルVol.10に関する概要記載テキストになります。"
+        },
+        {
+            "id": 11,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news11.jpg",
+            "title": "News表示サンプルVol.11",
+            "description": "こちらはNews表示サンプルVol.11に関する概要記載テキストになります。"
+        },
+        {
+            "id": 12,
+            "news_type": "お知らせ",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_news12.jpg",
+            "title": "News表示サンプルVol.12",
+            "description": "こちらはNews表示サンプルVol.12に関する概要記載テキストになります。"
+        }
+    ],
+    "get_main_photos": [
+        {
+            "page": 1,
+            "photos": [
+                {
+                    "id": 1,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo1.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.1",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.1になります。"
+                },
+                {
+                    "id": 2,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo2.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.2",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.2になります。"
+                },
+                {
+                    "id": 3,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo3.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.3",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.3になります。"
+                },
+                {
+                    "id": 4,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo4.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.4",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.4になります。"
+                },
+                {
+                    "id": 5,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo5.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.5",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.5になります。"
+                },
+                {
+                    "id": 6,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo6.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.6",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.6になります。"
+                },
+                {
+                    "id": 7,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo7.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.7",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.7になります。"
+                },
+                {
+                    "id": 8,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo8.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.8",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.8になります。"
+                },
+                {
+                    "id": 9,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo9.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.9",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.9になります。"
+                },
+                {
+                    "id": 10,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo10.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.10",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.10になります。"
+                }
+            ],
+            "has_next_page": true
+        },
+        {
+            "page": 2,
+            "photos": [
+                {
+                    "id": 11,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo11.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.11",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.11になります。"
+                },
+                {
+                    "id": 12,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo12.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.12",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.12になります。"
+                },
+                {
+                    "id": 13,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo13.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.13",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.13になります。"
+                },
+                {
+                    "id": 14,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo14.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.14",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.14になります。"
+                },
+                {
+                    "id": 15,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo15.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.15",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.15になります。"
+                },
+                {
+                    "id": 16,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo16.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.16",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.16になります。"
+                },
+                {
+                    "id": 17,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo17.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.17",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.17になります。"
+                },
+                {
+                    "id": 18,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo18.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.18",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.18になります。"
+                },
+                {
+                    "id": 19,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo19.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.19",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.19になります。"
+                },
+                {
+                    "id": 20,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo20.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.20",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.20になります。"
+                }
+            ],
+            "has_next_page": true
+        },
+        {
+            "page": 3,
+            "photos": [
+                {
+                    "id": 21,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo21.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.21",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.21になります。"
+                },
+                {
+                    "id": 22,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo22.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.22",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.22になります。"
+                },
+                {
+                    "id": 23,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo23.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.23",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.23になります。"
+                },
+                {
+                    "id": 24,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo24.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.24",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.24になります。"
+                },
+                {
+                    "id": 25,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo25.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.25",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.15になります。"
+                },
+                {
+                    "id": 26,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo26.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.26",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.26になります。"
+                },
+                {
+                    "id": 27,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo27.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.27",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.27になります。"
+                },
+                {
+                    "id": 28,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo28.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.28",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.28になります。"
+                },
+                {
+                    "id": 29,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo29.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.29",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.29になります。"
+                },
+                {
+                    "id": 30,
+                    "date_string": "2021.07.21",
+                    "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/top_photo30.jpg",
+                    "title": "夏を感じる食べ物の写真Vol.30",
+                    "description": "心も胃袋も元気になる事が間違いない珠玉の一品Vol.30になります。"
+                }
+            ],
+            "has_next_page": false
+        }
+    ],
+    "get_featured_contents": [
+        {
+            "id": 1,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo1.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.1",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 2,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo2.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.2",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 3,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo3.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.3",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 4,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo4.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.4",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 5,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo5jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.5",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 6,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo6.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.6",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
+        },
+        {
+            "id": 7,
+            "author_name": "fumiyasac_test",
+            "date_string": "2021.07.21",
+            "image_url": "https://summer-exmples.s3.ap-northeast-1.amazonaws.com/development/featured_photo7.jpg",
+            "title": "特集コンテンツ用記事表示サンプルVol.7",
+            "main_text": "こちらは記事サンプルに関するテキストになります（Markdownをサポート予定）。",
+            "sub_text": "その他補足情報等を掲載する部分になります（Markdownをサポート予定）。"
         }
     ]
 }
