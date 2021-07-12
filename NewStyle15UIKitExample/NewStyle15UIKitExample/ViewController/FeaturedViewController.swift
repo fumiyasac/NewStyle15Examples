@@ -30,10 +30,14 @@ final class FeaturedViewController: UIViewController {
         super.viewDidLoad()
 
         bindToViewModelOutputs()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         viewModel.inputs.initialFetchTrigger.send()
     }
-
+    
     // ViewModelのOutputとこのViewControllerでのUIに関する処理をバインドする
     private func bindToViewModelOutputs() {
 
@@ -42,6 +46,7 @@ final class FeaturedViewController: UIViewController {
             .subscribe(on: DispatchQueue.main)
             .sink(
                 receiveValue: { state in
+                self.handleRefrashControl(state: state)
                     print(state)
                 }
             )
@@ -56,7 +61,6 @@ final class FeaturedViewController: UIViewController {
             .store(in: &cancellables)
     }
 
-    @MainActor
     private func handleRefrashControl(state: APIRequestState) {
         switch state {
         case .requesting:

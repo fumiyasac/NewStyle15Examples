@@ -63,12 +63,14 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
 
     // MARK: - Initializer
 
+    @MainActor
     init(apiClientManager: ApiClientManagerProtocol) {
         self.apiClientManager = apiClientManager
 
         // MEMO: InputTriggerとAPIリクエストをするための処理を結合する
         // → 実行時はViewController側でviewModel.inputs.fetch●●●Trigger.send()で実行する
         initialFetchTrigger
+            .subscribe(on: DispatchQueue.main)
             .sink(
                 receiveValue: { [weak self] _ in
                     guard let weakSelf = self else {
@@ -82,6 +84,7 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
         // MEMO: 現在まで取得したデータのリフレッシュ処理を伴うAPIリクエスト
         // → 実行時はViewController側でviewModel.inputs.refreshTrigger.send()で実行する
         refreshTrigger
+            .subscribe(on: DispatchQueue.main)
             .sink(
                 receiveValue: { [weak self] in
                     guard let weakSelf = self else {
@@ -102,6 +105,7 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
 
     // MARK: - Privete Function
 
+    @MainActor
     private func fetchFeaturedContents() {
 
         // APIとの通信処理を実行する
