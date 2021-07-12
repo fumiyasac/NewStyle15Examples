@@ -6,12 +6,63 @@
 //
 
 import UIKit
+import Combine
 
 final class FeaturedViewController: UIViewController {
+
+    // MARK: - Property
+
+    // UITableViewに設置するRefreshControl
+    private let refrashControl = UIRefreshControl()
+
+    // sink(receiveCompletion:receiveValue:)実行時に返されるCancellableの保持用の変数
+    private var cancellables: [AnyCancellable] = []
+
+    // MEMO: API経由の非同期通信からデータを取得するためのViewModel
+    // 補足: Mockに接続する場合はMockAPIRequestManager.sharedを設定する（実機検証時等の場合）
+    private let viewModel: FeaturedContentsViewModel = FeaturedContentsViewModel(apiClientManager: ApiClientManager.shared)
+
+    private var apiRequestState: APIRequestState = .none
 
     // MARK: - Override
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        bindToViewModelOutputs()
+
+        viewModel.inputs.initialFetchTrigger.send()
+    }
+
+    // ViewModelのOutputとこのViewControllerでのUIに関する処理をバインドする
+    private func bindToViewModelOutputs() {
+
+        // MEMO: APIへのリクエスト状態に合わせたUI側の表示におけるハンドリングを実行する
+        viewModel.outputs.apiRequestState
+            .subscribe(on: DispatchQueue.main)
+            .sink(
+                receiveValue: { state in
+                    print(state)
+                }
+            )
+            .store(in: &cancellables)
+        viewModel.outputs.featuredContents
+            .subscribe(on: DispatchQueue.main)
+            .sink(
+                receiveValue: { featuredContents in
+                    print(featuredContents)
+                }
+            )
+            .store(in: &cancellables)
+    }
+
+    @MainActor
+    private func handleRefrashControl(state: APIRequestState) {
+        switch state {
+        case .requesting:
+            refrashControl.beginRefreshing()
+        default:
+            refrashControl.endRefreshing()
+        }
     }
 }
