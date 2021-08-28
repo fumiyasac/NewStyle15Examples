@@ -63,7 +63,6 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
 
     // MARK: - Initializer
 
-    @MainActor
     init(apiClientManager: ApiClientManagerProtocol) {
         self.apiClientManager = apiClientManager
 
@@ -88,6 +87,7 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
             .sink(
                 receiveValue: { [weak self] in
                     guard let weakSelf = self else {
+                        assertionFailure()
                         return
                     }
                     weakSelf._featuredContents.removeAll()
@@ -105,19 +105,21 @@ final class FeaturedContentsViewModel: FeaturedContentsViewModelType, FeaturedCo
 
     // MARK: - Privete Function
 
-    @MainActor
     private func fetchFeaturedContents() {
-
-        // APIとの通信処理を実行する
-        _apiRequestState = .requesting
-        async {
+        Task { @MainActor [weak self] in
+            guard let weakSelf = self else {
+               assertionFailure()
+               return
+            }
+            // APIとの通信処理を実行する
+            weakSelf._apiRequestState = .requesting
             do {
                 let featuredContents = try await ApiClientManager.shared.getFeaturedContents()
-                _apiRequestState = .success
-                _featuredContents = featuredContents
+                weakSelf._apiRequestState = .success
+                weakSelf._featuredContents = featuredContents
                 print(featuredContents)
             } catch APIError.error(let message) {
-                _apiRequestState = .error
+                weakSelf._apiRequestState = .error
                 print(message)
             }
         }

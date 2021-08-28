@@ -45,8 +45,12 @@ final class FeaturedViewController: UIViewController {
         viewModel.outputs.apiRequestState
             .subscribe(on: DispatchQueue.main)
             .sink(
-                receiveValue: { state in
-                self.handleRefrashControl(state: state)
+                receiveValue: { [weak self] state in
+                    guard let weakSelf = self else {
+                        assertionFailure()
+                        return
+                    }
+                    weakSelf.handleRefrashControl(state: state)
                     print(state)
                 }
             )
@@ -54,7 +58,11 @@ final class FeaturedViewController: UIViewController {
         viewModel.outputs.featuredContents
             .subscribe(on: DispatchQueue.main)
             .sink(
-                receiveValue: { featuredContents in
+                receiveValue: { [weak self] featuredContents in
+                    guard let _ = self else {
+                        assertionFailure()
+                        return
+                    }
                     print(featuredContents)
                 }
             )
