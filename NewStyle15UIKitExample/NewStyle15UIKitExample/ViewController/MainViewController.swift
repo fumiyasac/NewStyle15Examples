@@ -15,12 +15,16 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBarTitle("Main")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         // MEMO: API疎通処理のテスト用に利用する処理
-        async {
+        Task {
             do {
-//                let mainPhoto = try await ApiClientManager.shared.getMainPhoto(page: 1)
-//                print(mainPhoto)
+                let mainPhoto = try await ApiClientManager.shared.getMainPhoto(page: 1)
+                print(mainPhoto)
 
 //                let mainBanner = try await ApiClientManager.shared.getMainBanner()
 //                print(mainBanner)
