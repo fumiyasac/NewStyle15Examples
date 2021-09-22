@@ -107,8 +107,13 @@ final class GlobalTabBarController: UITabBarController {
 
             // 該当ViewControllerのUITabBar要素の設定
             self.viewControllers?[index].tabBarItem.tag = index
-            self.viewControllers?[index].tabBarItem.setTitleTextAttributes(normalAttributes, for: [])
-            self.viewControllers?[index].tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
+            // MEMO: iOS15以降ではこちらの方法では適用されない点に注意
+            if #available(iOS 15, *) {
+                // Do Nothing.
+            } else {
+                self.viewControllers?[index].tabBarItem.setTitleTextAttributes(normalAttributes, for: [])
+                self.viewControllers?[index].tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
+            }
             self.viewControllers?[index].tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: 0.0)
             self.viewControllers?[index].tabBarItem.image
                 = UIImage(
@@ -120,6 +125,30 @@ final class GlobalTabBarController: UITabBarController {
                     systemName: tabBarItem.getTabBarSymbolName(),
                     withConfiguration: UIImage.SymbolConfiguration(pointSize: 12, weight: .black)
                     )!.withTintColor(selectedColor, renderingMode: .alwaysOriginal)
+        }
+    }
+
+    private func setupTabBarAppearance() {
+
+        // iOS15以降でiOS14以前と同じUINavigationBarの配色指定方法が変化する点に注意する
+        // https://shtnkgm.com/blog/2021-08-18-ios15.html
+
+        if #available(iOS 15.0, *) {
+            let tabBarAppearance = UITabBarAppearance()
+            let tabBarItemAppearance = UITabBarItemAppearance()
+
+            // UITabBarItemの選択時と非選択時の文字色の装飾設定
+            tabBarItemAppearance.normal.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : UIColor.lightGray
+                
+            ]
+            tabBarItemAppearance.selected.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : UIColor(code: "#cda966")
+            ]
+            tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
+
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }
     }
 }
