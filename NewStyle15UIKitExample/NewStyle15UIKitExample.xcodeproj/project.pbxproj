@@ -196,11 +196,18 @@
 			path = Question;
 			sourceTree = "<group>";
 		};
-		DE99DEDC269C024900E36D1C /* InternalJsonData */ = {
+		DEA57BCF2987310300872964 /* InternalJson */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = InternalJsonData;
+			path = InternalJson;
+			sourceTree = "<group>";
+		};
+		DEA57BD02987311400872964 /* ViewObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewObject;
 			sourceTree = "<group>";
 		};
 		DEAE7ED4268603A0009ACBD9 /* ViewModel */ = {
@@ -260,13 +267,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		DEAE7EE42686A161009ACBD9 /* ViewObject */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewObject;
-			sourceTree = "<group>";
-		};
 		DEB52A0A2684D160000C33A2 = {
 			isa = PBXGroup;
 			children = (
@@ -297,15 +297,15 @@
 				DEB52A212684D162000C33A2 /* LaunchScreen.storyboard */,
 				DEAE7ED82686A06C009ACBD9 /* Extension */,
 				DE99DE922693533100E36D1C /* Infrastructure */,
-				DE99DEDC269C024900E36D1C /* InternalJsonData */,
+				DEA57BCF2987310300872964 /* InternalJson */,
 				DE99DE962694ABE500E36D1C /* Model */,
 				DE99DE982694AC9400E36D1C /* Modules */,
 				DE99DE952694ABAA00E36D1C /* ResponseDataTransfer */,
 				DEAE7ED5268603D8009ACBD9 /* Storyboard */,
 				DEAE7ED6268603E4009ACBD9 /* View */,
 				DEAE7EDB2686A0E3009ACBD9 /* ViewController */,
+				DEA57BD02987311400872964 /* ViewObject */,
 				DEAE7ED4268603A0009ACBD9 /* ViewModel */,
-				DEAE7EE42686A161009ACBD9 /* ViewObject */,
 			);
 			path = NewStyle15UIKitExample;
 			sourceTree = "<group>";
