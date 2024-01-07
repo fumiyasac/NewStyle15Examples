@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE99DE8F269352A900E36D1C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DE99DE8E269352A900E36D1C /* KeychainAccess */; };
+		DE1FF3BE2B4AF00300B0BF22 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DE1FF3BD2B4AF00300B0BF22 /* KeychainAccess */; };
 		DE99DE9426935A6C00E36D1C /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9326935A6C00E36D1C /* KeychainManager.swift */; };
 		DE99DE9A2694ACB100E36D1C /* ResponseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE992694ACB100E36D1C /* ResponseDateFormatter.swift */; };
 		DE99DE9C2694ACF800E36D1C /* MainBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DE9B2694ACF800E36D1C /* MainBanner.swift */; };
@@ -16,8 +16,6 @@
 		DE99DED6269B423000E36D1C /* MainPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DED5269B423000E36D1C /* MainPhoto.swift */; };
 		DE99DEDB269B428F00E36D1C /* MainNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DEDA269B428F00E36D1C /* MainNews.swift */; };
 		DE99DEDE269C027B00E36D1C /* FeaturedContentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99DEDD269C027B00E36D1C /* FeaturedContentsViewModel.swift */; };
-		DEAE7ED02685FDAA009ACBD9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */; };
-		DEAE7ED326860391009ACBD9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = DEAE7ED226860391009ACBD9 /* SQLite */; };
 		DEAE7EDA2686A0BE009ACBD9 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7ED92686A0BE009ACBD9 /* CustomViewBase.swift */; };
 		DEAE7EDD2686A0FF009ACBD9 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EDC2686A0FF009ACBD9 /* NSObjectProtocolExtension.swift */; };
 		DEAE7EDF2686A114009ACBD9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EDE2686A114009ACBD9 /* UIColorExtension.swift */; };
@@ -97,9 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAE7ED326860391009ACBD9 /* SQLite in Frameworks */,
-				DEAE7ED02685FDAA009ACBD9 /* SDWebImage in Frameworks */,
-				DE99DE8F269352A900E36D1C /* KeychainAccess in Frameworks */,
+				DE1FF3BE2B4AF00300B0BF22 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE99DE90269352E300E36D1C /* SQLiteManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SQLiteManager;
-			sourceTree = "<group>";
-		};
 		DE99DE912693531200E36D1C /* KeychainManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +129,6 @@
 			children = (
 				DEAE7ED72686A060009ACBD9 /* ApiClientManager */,
 				DE99DE912693531200E36D1C /* KeychainManager */,
-				DE99DE90269352E300E36D1C /* SQLiteManager */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -156,7 +144,6 @@
 		DE99DE962694ABE500E36D1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE99DED9269B426900E36D1C /* Question */,
 				DE99DED7269B425100E36D1C /* Main */,
 				DE99DED8269B425B00E36D1C /* FeaturedContents */,
 			);
@@ -187,27 +174,6 @@
 				DE99DE9F2695402800E36D1C /* FeaturedContents.swift */,
 			);
 			path = FeaturedContents;
-			sourceTree = "<group>";
-		};
-		DE99DED9269B426900E36D1C /* Question */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Question;
-			sourceTree = "<group>";
-		};
-		DEA57BCF2987310300872964 /* InternalJson */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InternalJson;
-			sourceTree = "<group>";
-		};
-		DEA57BD02987311400872964 /* ViewObject */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewObject;
 			sourceTree = "<group>";
 		};
 		DEAE7ED4268603A0009ACBD9 /* ViewModel */ = {
@@ -297,14 +263,12 @@
 				DEB52A212684D162000C33A2 /* LaunchScreen.storyboard */,
 				DEAE7ED82686A06C009ACBD9 /* Extension */,
 				DE99DE922693533100E36D1C /* Infrastructure */,
-				DEA57BCF2987310300872964 /* InternalJson */,
 				DE99DE962694ABE500E36D1C /* Model */,
 				DE99DE982694AC9400E36D1C /* Modules */,
 				DE99DE952694ABAA00E36D1C /* ResponseDataTransfer */,
 				DEAE7ED5268603D8009ACBD9 /* Storyboard */,
 				DEAE7ED6268603E4009ACBD9 /* View */,
 				DEAE7EDB2686A0E3009ACBD9 /* ViewController */,
-				DEA57BD02987311400872964 /* ViewObject */,
 				DEAE7ED4268603A0009ACBD9 /* ViewModel */,
 			);
 			path = NewStyle15UIKitExample;
@@ -343,9 +307,7 @@
 			);
 			name = NewStyle15UIKitExample;
 			packageProductDependencies = (
-				DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */,
-				DEAE7ED226860391009ACBD9 /* SQLite */,
-				DE99DE8E269352A900E36D1C /* KeychainAccess */,
+				DE1FF3BD2B4AF00300B0BF22 /* KeychainAccess */,
 			);
 			productName = NewStyle15UIKitExample;
 			productReference = DEB52A132684D160000C33A2 /* NewStyle15UIKitExample.app */;
@@ -420,9 +382,8 @@
 			);
 			mainGroup = DEB52A0A2684D160000C33A2;
 			packageReferences = (
-				DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				DEAE7ED126860391009ACBD9 /* XCRemoteSwiftPackageReference "SQLite" */,
-				DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				DE1FF3BC2B4AF00300B0BF22 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				DE1FF3BF2B4AF03C00B0BF22 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = DEB52A142684D160000C33A2 /* Products */;
 			projectDirPath = "";
@@ -884,47 +845,29 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		DE1FF3BC2B4AF00300B0BF22 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
-		DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		DE1FF3BF2B4AF03C00B0BF22 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		DEAE7ED126860391009ACBD9 /* XCRemoteSwiftPackageReference "SQLite" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.12.0;
+				minimumVersion = 5.18.8;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DE99DE8E269352A900E36D1C /* KeychainAccess */ = {
+		DE1FF3BD2B4AF00300B0BF22 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DE99DE8D269352A900E36D1C /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = DE1FF3BC2B4AF00300B0BF22 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
-		};
-		DEAE7ECF2685FDAA009ACBD9 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEAE7ECE2685FDAA009ACBD9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		DEAE7ED226860391009ACBD9 /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEAE7ED126860391009ACBD9 /* XCRemoteSwiftPackageReference "SQLite" */;
-			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
