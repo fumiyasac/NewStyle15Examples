@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// TODO: SwiftUI + Observationを利用したUIサンプル
+
 @main
 struct NewStyle15SwiftUIExampleApp: App {
     var body: some Scene {
