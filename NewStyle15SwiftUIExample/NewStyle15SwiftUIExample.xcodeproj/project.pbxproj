@@ -212,6 +212,10 @@
 				Base,
 			);
 			mainGroup = DEB52A442684D1B9000C33A2;
+			packageReferences = (
+				DE2444302C6CBF6500379EB8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				DE2444312C6D1EDF00379EB8 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = DEB52A4E2684D1B9000C33A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -603,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE2444302C6CBF6500379EB8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		DE2444312C6D1EDF00379EB8 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DEB52A452684D1B9000C33A2 /* Project object */;
 }
