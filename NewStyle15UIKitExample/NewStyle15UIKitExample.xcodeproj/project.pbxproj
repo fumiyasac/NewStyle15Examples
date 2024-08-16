@@ -384,6 +384,8 @@
 			packageReferences = (
 				DE1FF3BC2B4AF00300B0BF22 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				DE1FF3BF2B4AF03C00B0BF22 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				DE2444332C6F716F00379EB8 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DE2444342C6F719000379EB8 /* XCRemoteSwiftPackageReference "swift-testing" */,
 			);
 			productRefGroup = DEB52A142684D160000C33A2 /* Products */;
 			projectDirPath = "";
@@ -859,6 +861,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.19.0;
+			};
+		};
+		DE2444332C6F716F00379EB8 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
+		DE2444342C6F719000379EB8 /* XCRemoteSwiftPackageReference "swift-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -2,12 +2,10 @@
 //  NewStyle15SwiftUIExampleApp.swift
 //  NewStyle15SwiftUIExample
 //
-//  Created by 酒井文也 on 2021/06/24.
+//  Created by 酒井文也 on 2024/08/16.
 //
 
 import SwiftUI
-
-// TODO: SwiftUI + Observationを利用したUIサンプル
 
 @main
 struct NewStyle15SwiftUIExampleApp: App {
